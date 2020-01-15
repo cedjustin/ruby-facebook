@@ -1,17 +1,65 @@
-<%= form_with(scope: :session, url: sessions_path, local: true) do |form| %>
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+<div>
+  <nav class="navbar navbar-light facebook-bg pt-4 pb-4">
+    <div class="container">
+      <div class="h2 text-light">facebook</div>
+      <%= form_with(scope: :session, url: sessions_path, local: true) do |form| %>
+        <div class="ml-auto row d-flex align-items-center">
+          <div class="mr-2">
+            <div>
+              <span class="text-light">Email<span>
+            </div>
+            <div>
+              <%= form.text_field :email %>
+            </div>
+          </div>
+          <div class="mr-2">
+            <div>
+              <span class="text-light">Password<span>
+            </div>
+            <div>
+              <%= form.password_field :password %>
+            </div>
+          </div>
+          <div>
+            <%= form.submit 'login', class: "btn btn-outline-primary mt-4" %>
+            <%= link_to "signup", new_user_path,class: "btn btn-outline-primary mt-4 text-light"%>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </nav>
+  <div class="bg-light full-screen">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <p class="h4 mt-5">
+            Connect with friends and the
+            world around you on Facebook.
+          </p>
+          <div class="mt-5">
+            <div class="row d-flex align-items-center">
+              <img src="https://scontent.fkgl1-1.fna.fbcdn.net/v/t39.2365-6/32213527_1720875981299142_7601737152052854784_n.png?_nc_cat=1&_nc_oc=AQltuahEkMy20pA0WqUTg3iPF56VBS5p6zwo_MVaSO7SIv4k4YE-bwQH1hXnDcOZJ1U&_nc_ht=scontent.fkgl1-1.fna&oh=ee754b866d0adac683cdab2c8919f351&oe=5EA236E8">
+              <div class="ml-3">
+                <strong>See photos and updates</strong><span>from friends in News Feed.</span>
+              </div>
+            </div>
+            <div class="row d-flex align-items-center mt-3">
+              <img src="https://scontent.fkgl1-1.fna.fbcdn.net/v/t39.2365-6/32220240_200651090730619_3989834943638274048_n.png?_nc_cat=1&_nc_oc=AQkvla_BRZZkE_5zPQspRpWnDVBg2wPRQLUSPDexVZ1j5lbWCV42Tfluo6KjROuP41Q&_nc_ht=scontent.fkgl1-1.fna&oh=28837d896ceecc957a421d67afab69d6&oe=5EA1A236">
+              <div class="ml-3">
+                <strong>Share what's new</strong><span>in your life on your Timeline.</span>
+              </div>
+            </div>
+            <div class="row d-flex align-items-center mt-3">
+              <img src="https://scontent.fkgl1-1.fna.fbcdn.net/v/t39.2365-6/32158113_191365994837162_5605369115159035904_n.png?_nc_cat=1&_nc_oc=AQlSK2Tc7iCMUO5DBI9GlCxY-MBzhFcYf3a1S3YbUILyz5uG7LvVPQQoNegt4QjFTB4&_nc_ht=scontent.fkgl1-1.fna&oh=f302ad0cfb5ef67abcb6d9e099ebf04c&oe=5ED8CCB5">
+              <div class="ml-3">
+                <strong>Find more</strong><span>of what you're looking for with Facebook Search.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-
-<%= link_to "signup", new_user_path %>
+</div>

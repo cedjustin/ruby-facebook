@@ -1,5 +1,9 @@
-<h1>New User</h1>
-
-<%= render 'form', user: @user %>
-
-<%= link_to 'Back', new_session_path %>
+<nav class="navbar navbar-light facebook-bg">
+    <img src="https://img.icons8.com/color/48/000000/facebook-circled.png">
+</nav>
+<div class="full-screen bg-light d-flex justify-content-center align-items-center">
+    <div>
+        <%= render 'form', user: @user %>
+        <%= link_to 'Back', new_session_path %>
+    </div>
+</div>

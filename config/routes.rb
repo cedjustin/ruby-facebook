@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root "sessions#new"
   resources :sessions
   resources :users
-  resources :post do
+  resources :posts do
     collection do
       post :confirm
     end

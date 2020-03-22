@@ -17,6 +17,7 @@
   <%= form.hidden_field :user_id, :value => current_user.id %>
 
   <%= form.file_field :image%>
+   <%= form.hidden_field  :image_cache %>
 
   <div class="actions mt-3">
     <%= form.submit "post", class:"btn btn-outline-dark"  %>

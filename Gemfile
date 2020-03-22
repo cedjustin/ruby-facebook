@@ -11,7 +11,6 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
-gem 'paperclip'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 
@@ -33,3 +32,5 @@ group :test do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'carrierwave'
+gem 'mini_magick'

@@ -13,8 +13,13 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
-    current_user = @current_user
+    if params[:back]
+      @post = Post.new(post_params)
+      current_user = @current_user
+    else
+      @post = Post.new
+      current_user = @current_user
+    end
   end
 
 
